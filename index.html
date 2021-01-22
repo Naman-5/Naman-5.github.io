@@ -5,99 +5,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-        * {
-          box-sizing: border-box;
-        }
-        
-        /* Style the body */
-        body {
-          font-family: Arial, Helvetica, sans-serif;
-          margin: 0;
-        }
-        
-        /* Header/logo Title */
-        .header {
-          padding: 80px;
-          text-align: center;
-          background: #1abc9c;
-          color: white;
-        }
-        
-        /* Increase the font size of the heading */
-        .header h1 {
-          font-size: 40px;
-        }
-        
-        /* Style the top navigation bar */
-        .navbar {
-          overflow: hidden;
-          background-color: #333;
-        }
-        
-        /* Style the navigation bar links */
-        .navbar a {
-          float: left;
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 20px;
-          text-decoration: none;
-        }
-        
-        /* Change color on hover */
-        .navbar a:hover {
-          background-color: #ddd;
-          color: black;
-        }
-        
-        /* Column container */
-        .row {  
-          display: -ms-flexbox; /* IE10 */
-          display: flex;
-          -ms-flex-wrap: wrap; /* IE10 */
-          flex-wrap: wrap;
-        }
-        
-        /* Create two unequal columns that sits next to each other */
-        /* Sidebar/left column */
-        .side {
-          -ms-flex: 30%; /* IE10 */
-          flex: 30%;
-          background-color: #f1f1f1;
-          padding: 20px;
-          text-align: justify;
-        }
-        
-        /* Main column */
-        .main {   
-          -ms-flex: 70%; /* IE10 */
-          flex: 70%;
-          background-color: white;
-          padding: 20px;
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        /* Footer */
-        .footer {
-          padding: 20px;
-          text-align: center;
-          background: #ddd;
+      /* Style the body */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      /* Header/logo Title */
+      .header {
+        padding: 80px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+      }
+
+      /* Increase the font size of the heading */
+      .header h1 {
+        font-size: 40px;
+      }
+
+      /* Style the top navigation bar */
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      /* Style the navigation bar links */
+      .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+
+      /* Change color on hover */
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      /* Column container */
+      .row {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+      }
+
+      /* Create two unequal columns that sits next to each other */
+      /* Sidebar/left column */
+      .side {
+        -ms-flex: 30%; /* IE10 */
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: justify;
+      }
+
+      /* Main column */
+      .main {
+        -ms-flex: 70%; /* IE10 */
+        flex: 70%;
+        background-color: white;
+        padding: 20px;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #ddd;
+      }
+
+      /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 700px) {
+        .row {
+          flex-direction: column;
         }
-        
-        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 700px) {
-          .row {   
-            flex-direction: column;
-          }
+      }
+
+      /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+      @media screen and (max-width: 400px) {
+        .navbar a {
+          float: none;
+          width: 100%;
         }
-        
-        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-        @media screen and (max-width: 400px) {
-          .navbar a {
-            float: none;
-            width: 100%;
-          }
-        }
-        </style>
+      }
+      .EducationLogo {
+        border-radius: 50%;
+        width: 100px;
+        float: right;
+      }
+      .EducationLogo:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+      }
+    </style>
   </head>
   <body>
     <!-- class header can be found in the style sheet located in head section -->
@@ -129,13 +137,30 @@
     <div class="row">
       <div class="side">
         <h2>About Me</h2>
-        <p >I am a B.Tech. Computer Science student at Bennett University, Greater Noida.</p>
-        <p>So what made me pursue Computer Science and Engineering in the first place? Computers are everywhere, they not only
-            make our task easier, our days more productive & efficient but above all connect people. Connecting people from different 
-            regions opens up a world of opportunities and being a computer science engineer puts me at the forefront of all this action.
-            The tremendous amounts of possibilities and the opportunity to make the world a better place is what drives me and motivates me
-            to gain more knowledge about these powerful machines.
+        <p>
+          I am a B.Tech. Computer Science student at Bennett University, Greater
+          Noida.
         </p>
+        <p>
+          So what made me pursue Computer Science and Engineering in the first
+          place? Computers are everywhere, they not only make our task easier,
+          our days more productive & efficient but above all connect people.
+          Connecting people from different regions opens up a world of
+          opportunities and being a computer science engineer puts me at the
+          forefront of all this action. The tremendous amounts of possibilities
+          and the opportunity to make the world a better place is what drives me
+          and motivates me to gain more knowledge about these powerful machines.
+        </p>
+        <h2>Education</h2>
+        <div>
+          <img src="BU_logo.png" class="EducationLogo" />
+          <h4>Bacherlor of Technology</h4>
+          <pre>
+Bennett University
+2019-2023
+            </pre
+          >
+        </div>
       </div>
       <div class="main">
         <h2>Main section</h2>
