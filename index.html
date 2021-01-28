@@ -27,10 +27,18 @@
 
     /* Header/logo Title */
     .header {
-      padding: 80px;
+      padding: 100px;
       text-align: center;
-      background: #1abc9c;
-      color: white;
+      /* background: #1abc9c; */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #cccccc;
+      background-position:top;
+      background-image: url(./ArtWork/mainBanner.jpg);
+      color: yellow;
+      font-weight: bold;
+      border: 5px solid #f1f1f1;
+      position:sticky;
     }
 
     /* Increase the font size of the heading */
@@ -125,9 +133,10 @@
 
 <body>
   <!-- class header can be found in the style sheet located in head section -->
-  <div class="header">
+  <script src="./Scripts/shrinkHeader.js"></script>
+  <div class="header" id="MainBanner">
     <h1>Codegenix</h1>
-    <p>A website created by Naman</p>
+    <p><i>A website created by Naman</i></p>
   </div>
   <!-- navbar contains links to various sections -->
   <div class="mynavbar">
@@ -223,14 +232,10 @@
       </div>
       <!-----------------------Class side closing tag------------------------------------->
     </div>
-    <br />
-    <br />
-    <br />
-
     <!-------------------------Row-main closing tag--------------------------------------->
   </div>
 
-  <!-- <div class="footer">Footer</div> -->
+  <div class="footer">Footer</div>
 </body>
 
 </html>
