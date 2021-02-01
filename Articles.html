@@ -45,9 +45,16 @@
         background-color: #ddd;
         color: black;
       }
+
+      /* Styling for article list*/
+      #content 
+      {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
     </style>
   </head>
-  <body>
+  <body onload="loadAllArticles()">
     <!-- class header can be found in the style sheet located in head section -->
     <div class="header">
       <h1>Articles</h1>
@@ -68,9 +75,15 @@
       value 0 -> All
       value 1 -> Cloud Computing
      -->
-    <select style="float: right; margin-right: 2%;">
+    <select onchange="loadSelected(document.getElementById('selector').value)" id='selector'  style="float: right; margin-right: 2%;">
       <option value="0">All</option>
       <option value="1">Cloud Computing</option>
     </select>
+
+    <script src="./Scripts/fileManagement.js"></script>
+    <br/> <br/>
+    <div id="content">
+
+    </div>
   </body>
 </html>
