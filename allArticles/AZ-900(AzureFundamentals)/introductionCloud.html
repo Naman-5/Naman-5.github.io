@@ -1,52 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What is the Cloud?</title>
-<style>
-body { 
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-#header {
-  background-color:  #1abc9c;
-  padding: 50px 10px;
-  color: white;
-  text-align: center;
-  font-size: 90px; 
-  font-weight: bold;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  transition: 0.2s;
-}
-</style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What is the Cloud?</title>
+  <style>
+    body {
+      margin: 0;
+      height: min-content;
+      font-family: Arial, Helvetica, sans-serif;
+      overscroll-behavior: contain;
+      /* overflow:hidden; */
+    }
+
+    #header {
+      background-color: #1abc9c;
+      padding: 50px 10px;
+      color: white;
+      text-align: center;
+      font-size: 90px;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      transition: 0.2s;
+    }
+
+    #content p {
+      text-align: justify;
+      font-size: 22px;
+    }
+  </style>
 </head>
+
 <body>
 
-<div id="header">Codegenix</div>
+  <div id="header">Codegenix</div>
 
-<div style="margin-top:200px;padding:15px 15px 2500px;font-size:30px">
-  <p><b>This example demonstrates how to shrink a header when the user starts to scroll the page.</b></p>
-  <p>Scroll down this frame to see the effect!</p>
-  <p>Scroll to the top to remove the effect.</p>
-  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
+  <div style="margin-top:200px;padding:5px 50px;margin-left:5%;margin-right: 5%; " id="content">
+    <h1 style="font-size:xx-large;">What is the Cloud?</h1>
+    <img src="./artWork/mainImage.jpg"
+      style="display: block;margin-left: auto;margin-right: auto;width: 75%;height: 85%;">
+    <p>
+      In today's fast-paced and interconnected world where information is just a few clicks away, we rely heavily upon
+      cloud technologies. Cloud in layman terms is just a bunch of servers that provide computation power and storage.
+      Cloud Services provide on-demand availability of computing resources in a pay as you go, pricing model.
+    </p>
+    <p>
+      Pay as you go model helps in:
+    <ul style="font-size: 20px;">
+      <li>Lowering your operating costs</li>
+      <li>Running your infrastructure efficiently</li>
+      <li>Scale as your business needs change</li>
+    </ul>
+    </p>
+    <p>
+      Why move to the Cloud?
+    <ul style="font-size: 20px;">
+      <li>Moving to the cloud gets one access to nearly limitless pool of raw compute, storage and networking components
+      </li>
+      <li>Cloud services could be beneficial if one wants to integrate speech recognition and other cognitive services
+        in their products</li>
+      <li>Could be beneficial in integrating analytics services and telemetry data from software and devices</li>
+    </ul>
+    </p>
+    <h2>Some Cloud Computing Advantages</h2>
+    <h3>Reliability</h3>
+    <p style="display: block;">
+      In a perfect world, our systems would be 100% reliable. But unfortunately, that is not the case services do
+      experience faults caused due to multiple factors like server downtime, software failures, security breaches, etc.
+      Cloud services can aid businesses in increasing their service reliability. Businesses can rent additional
+      resources that can act as redundant power that kicks in automatically if something goes wrong.
+      <br />
+      Reliability is a crucial factor in a business setting as any downtime could be the reason to lost revenue and
+      trust. Therefore, one must invest in good resources and test their systems against real-world scenarios before
+      actually deploying the final product.
+    </p>
+  </div>
 
-<script>
-// When the user scrolls down 50px from the top of the document, resize the header's font size
-window.onscroll = function() {scrollFunction()};
+  <script>
+    // When the user scrolls down 50px from the top of the document, resize the header's font size
+    window.onscroll = function () { scrollFunction() };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("header").style.fontSize = "30px";
-  } else {
-    document.getElementById("header").style.fontSize = "90px";
-  }
-}
-</script>
+    function scrollFunction() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("header").style.fontSize = "30px";
+      } else {
+        document.getElementById("header").style.fontSize = "90px";
+      }
+    }
+  </script>
 
 </body>
-</html>
 
+</html>
