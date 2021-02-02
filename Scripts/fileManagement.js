@@ -70,7 +70,6 @@ class ManageFiles
                             // creating a division for the article and styling it
                             var articleDiv = document.createElement("div");
                             articleDiv.style.background = "#f1f1f1";
-
                             articleDiv.appendChild(document.createElement("br"));
 
                             // article image
@@ -81,15 +80,19 @@ class ManageFiles
                             img.style.margin = '0px 30px';
                             articleDiv.appendChild(img);
 
+                            if(window.innerWidth<=800)
+                            {
+                                articleDiv.appendChild(document.createElement("br"));
+                            }
                             // getting the title and location for the article
                             var title = document.createElement("a");
                             title.setAttribute('href',series[k]["Location"]);
                             var text = document.createTextNode(series[k]["Title"]);
                             title.appendChild(text);
                             // styling the link
-                            // title.style.marginLeft = "2%";
                             title.style.textDecoration = "none";
                             title.style.fontSize = "25px";
+                            title.style.textAlign = 'justify';
                             articleDiv.appendChild(title);
 
                            
@@ -153,16 +156,19 @@ class ManageFiles
                         img.src = series[k]["Image"];
                         img.style.width = "30%";
                         img.style.verticalAlign = 'middle';
-                        img.style.margin = '0px 50px';
+                        img.style.margin = '0px 30px';
                         articleDiv.appendChild(img);
 
+                        if(window.innerWidth<=800)
+                        {
+                            articleDiv.appendChild(document.createElement("br"));
+                        }
                         // getting the title and location for the article
                         var title = document.createElement("a");
                         title.setAttribute('href',series[k]["Location"]);
                         var text = document.createTextNode(series[k]["Title"]);
                         title.appendChild(text);
                         // styling the link
-                        title.style.marginLeft = "2%";
                         title.style.textDecoration = "none";
                         title.style.fontSize = "25px";
                         articleDiv.appendChild(title);
