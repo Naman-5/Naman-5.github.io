@@ -78,7 +78,7 @@ class ManageFiles
                             img.src = series[k]["Image"];
                             img.style.width = "30%";
                             img.style.verticalAlign = 'middle';
-                            img.style.margin = '0px 50px';
+                            img.style.margin = '0px 30px';
                             articleDiv.appendChild(img);
 
                             // getting the title and location for the article
@@ -87,7 +87,7 @@ class ManageFiles
                             var text = document.createTextNode(series[k]["Title"]);
                             title.appendChild(text);
                             // styling the link
-                            title.style.marginLeft = "2%";
+                            // title.style.marginLeft = "2%";
                             title.style.textDecoration = "none";
                             title.style.fontSize = "25px";
                             articleDiv.appendChild(title);
