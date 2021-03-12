@@ -5,147 +5,40 @@
   <title>Codegenix|Home</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <link rel="stylesheet" href="./cssFiles/homePage.css">
+  <!-- Load an icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
   <!-- Popper JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    /* Style the body */
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-    }
-
-    /* Header/logo Title */
-    .header {
-      padding: 100px;
-      text-align: center;
-      /* background: #1abc9c; */
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-color: #cccccc;
-      background-position:top;
-      background-image: url(./ArtWork/mainBanner.jpg);
-      color: yellow;
-      font-weight: bold;
-      border: 5px solid #f1f1f1;
-      position:sticky;
-    }
-
-    /* Increase the font size of the heading */
-    .header h1 {
-      font-size: 40px;
-    }
-
-    /* Style the top navigation bar */
-    .mynavbar {
-      overflow: hidden;
-      background-color: #333;
-    }
-
-    /* Style the navigation bar links */
-    .mynavbar a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-    }
-
-    /* Change color on hover */
-    .mynavbar a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    /* Column container */
-    .row-main {
-      display: -ms-flexbox;
-      /* IE10 */
-      display: flex;
-      -ms-flex-wrap: wrap;
-      /* IE10 */
-      flex-wrap: wrap;
-    }
-
-    /* Create two unequal columns that sits next to each other */
-    /* Sidebar/left column */
-    .side {
-      -ms-flex: 30%;
-      /* IE10 */
-      flex: 30%;
-      background-color: #f1f1f1;
-      padding: 20px;
-      text-align: justify;
-    }
-
-    /* Main column */
-    .main {
-      -ms-flex: 70%;
-      /* IE10 */
-      flex: 70%;
-      background-color: white;
-      padding: 20px;
-    }
-
-    /* Footer */
-    .footer {
-      padding: 20px;
-      /* background-color: #1abc9c; */
-      text-align: center;
-      background: #333;
-      color: white;
-    }
-
-    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 700px) {
-      .row-main {
-        flex-direction: column;
-      }
-    }
-
-    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-    @media screen and (max-width: 400px) {
-      .navbar a {
-        float: none;
-        width: 100%;
-      }
-    }
-
-    .EducationLogo {
-      border-radius: 50%;
-      width: 100px;
-    }
-
-    .EducationLogo:hover {
-      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-    }
-  </style>
+  <script src="./Scripts/navManagement.js"></script>
+  <script src="./Scripts/animateHeader.js"></script>
 </head>
 
 <body>
   <!-- class header can be found in the style sheet located in head section -->
-  <script src="./Scripts/animateHeader.js"></script>
   <div class="header" id="MainBanner">
-    <h1>Codegenix</h1>
-    <p><i>A website created by Naman</i></p>
+    <div class="container">
+      <!--Adding the navbar button to the banner-->
+      <div id="main">
+        <button class="openbtn" onclick="openCloseNav()">☰</button>
+      </div>
+    </div>
+    <div style="padding: 100px;">
+      <h1>Codegenix</h1>
+      <p><i>A website created by Naman</i></p>
+    </div>
   </div>
-  <!-- navbar contains links to various sections -->
-  <div class="mynavbar">
-    <a href="Articles.html">Articles</a>
-    <a href="Projects.html">Projects</a>
-    <a href="skills.html">Skills</a>
-    <a href="Experience.html">Experience</a>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="#"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="./Articles.html"><i class="fa fa-fw fas fa-edit"></i>Articles</a>
+    <a href="./Projects.html"><i class="fa fa-fw fa-code-fork"></i>Projects</a>
+    <a href="./skills.html"><i class="fa fa-fw fas fa-code"></i>Skills</a>
+    <a href="./Experience.html"><i class="fa fa-fw fas fa-graduation-cap"></i>Experience</a>
   </div>
 
   <!--Combined division of side menu (about me) and main section-->
@@ -239,4 +132,5 @@
 
   <!-- <div class="footer">Footer</div> -->
 </body>
+
 </html>
