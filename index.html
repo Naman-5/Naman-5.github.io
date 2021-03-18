@@ -16,7 +16,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="./Scripts/navManagement.js"></script>
 </head>
-
 <body>
   <!----------------------------------------------------------------- Header Section (begins) ------------------------------------------------------------------->
   <section class="header-slanted-div">
@@ -26,7 +25,7 @@
         <button class="openbtn" onclick="openCloseNav()">☰</button>
       </div>
     </div>
-    <br/>
+    <br />
     <div style="padding: 10px;">
       <h1 style="color: #66fcf1;"><i>Hi I'm Naman.</i></h1>
       <div class="row-main">
@@ -52,9 +51,9 @@
       </div>
     </div>
   </section>
-<!----------------------------------------------------------------- Header Section (ends) ------------------------------------------------------------------->
+  <!----------------------------------------------------------------- Header Section (ends) ------------------------------------------------------------------->
 
-<!----------------------------------------------------------------- SideBar Menu (begins) ------------------------------------------------------------------->
+  <!----------------------------------------------------------------- SideBar Menu (begins) ------------------------------------------------------------------->
   <div id="mySidebar" class="sidebar">
     <a href="./index.html"><i class="fa fa-fw fa-home"></i>Home</a>
     <a href="./Articles.html"><i class="fa fa-fw fas fa-edit"></i>Articles</a>
@@ -63,96 +62,46 @@
     <a href="./Experience.html"><i class="fa fa-fw fas fa-graduation-cap"></i>Experience</a>
   </div>
   <!----------------------------------------------------------------- SideBar Menu (ends) ------------------------------------------------------------------->
-  <br></br>
-  <br></br>
-  <br></br>
-  <!--Combined division of side menu (about me) and main section-->
-  <div class="row-main">
-    <!-------------------------------------------------------------------The main page content comes in this division------------------------------------------------------------>
-    <div class="main">
-      <p style="margin-left: 1%;width: 99%;font-size: 22px;text-align: justify;">
-        I am a B.Tech. Computer Science student at Bennett University, Greater
-        Noida.
-      </p>
-      <p style="margin-left: 1%;width: 99%;font-size: 22px;text-align: justify;">
-        So what made me pursue Computer Science and Engineering in the first
-        place? Computers are everywhere, they not only make our task easier,
-        our days more productive & efficient but above all connect people.
-        Connecting people from different regions opens up a world of
-        opportunities and being a computer science engineer puts me at the
-        forefront of all this action. The tremendous amounts of possibilities
-        and the opportunity to make the world a better place is what drives me
-        and motivates me to gain more knowledge about these powerful machines.
-      </p>
-    </div>
-    <!--------------------------------------------------------------------- About me section (left side menu) ------------------------------------------------------------------->
-    <div class="side">
-      <!---------------Paragraph about me ( it doesnt has its own div)---------------->
-      <!-- <h2>About Me</h2>
-      <p>
-        I am a B.Tech. Computer Science student at Bennett University, Greater
-        Noida.
-      </p>
-      <p>
-        So what made me pursue Computer Science and Engineering in the first
-        place? Computers are everywhere, they not only make our task easier,
-        our days more productive & efficient but above all connect people.
-        Connecting people from different regions opens up a world of
-        opportunities and being a computer science engineer puts me at the
-        forefront of all this action. The tremendous amounts of possibilities
-        and the opportunity to make the world a better place is what drives me
-        and motivates me to gain more knowledge about these powerful machines.
-      </p>
-      <hr> -->
-      <!--------------------Current position division---------------------------------->
-      <div>
-        <h2>Current Position</h2>
-        <div style="clear:right">
-          <p style="float: right;">
-            <img src="./Positions/GFG_bu.png" class="EducationLogo">
-          </p>
-          <p style="display:block">
-          <h4>Social Media Head</h4>
-          GeeksforGeeks Society, <br />
-          Bennett University
-          <br />
-          <br />
-          Jul 2020 - Present
-          <br />
-          <br />
-          </p>
+  <br><br/>
+  <br><br/>
+  <!----------------------------------------------------------------- Current Position (starts) ------------------------------------------------------------------->
+    <div id="positionBlock" style="margin-left: 1%; font-size: 1.5em;">
+      <h1 style="margin-left: 1%; text-align: center;">Current Position</h1>
+      <div class="row-main">
+        <div class="side-edu-cp" >
+          <img src="./Positions/GFG_bu.png" class="EducationLogo">
         </div>
-
-        <!-----------------------Position closing tag------------------------------------>
-      </div>
-      <hr>
-      <!-------------------------Education Division-------------------------------------->
-      <div>
-        <h2>Education</h2>
-        <div style="clear:right">
-          <p style="float: right;">
-            <img src="./LanguageLogos/Bennett.png" class="EducationLogo">
-          </p>
-          <p>
-          <h4>B.Tech. CSE</h4>
-          Bennett University, <br />
-          Greater Noida,
-          India
-          <br />
-          <br />
-          2019 - 2023
-          <br />
-          <br />
-          </p>
+  
+        <div class="main-edu-cp">
+              <h3>Social Media Head</h3>
+              <pre>
+GeeksforGeeks Society
+Bennett University
+Jul 2020 - Present
+              </pre>
         </div>
-
-        <!---------------------Education closing tag-------------------------------------->
       </div>
-      <!-----------------------Class side closing tag------------------------------------->
     </div>
-    <!-------------------------Row-main closing tag--------------------------------------->
+  <!----------------------------------------------------------------- Current Position (ends) ------------------------------------------------------------------->
+  <!----------------------------------------------------------------- Education (begins) ------------------------------------------------------------------->
+  <div id="eduBlock" style="margin-left: 1%; font-size: 1.5em;">
+    <h1 style="margin-left: 1%;text-align: center;">Education</h1>
+    <div class="row-main">
+      <div class="side-edu-cp" >
+        <img src="./LanguageLogos/Bennett.webp"  class="EducationLogoRect">
+      </div>
+
+      <div class="main-edu-cp">
+            <h3>B.Tech. CSE</h3>
+            <pre>
+Bennett University
+Greater Noida, India
+2019 - 2023
+            </pre>
+      </div>
+    </div>
   </div>
-
+  <!----------------------------------------------------------------- Education (ends) ------------------------------------------------------------------->
   <!-- <div class="footer">Footer</div> -->
 </body>
 

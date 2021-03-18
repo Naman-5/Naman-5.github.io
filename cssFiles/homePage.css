@@ -81,6 +81,26 @@
       width: 100%;
     }
   }
+
+  /* for education and current position */
+   /* Sidebar/left column */
+   .side-edu-cp{
+    -ms-flex: 50%;
+    /* IE10 */
+    flex: 50%;
+    /* background-color: #f1f1f1; */
+    padding: 20px;
+    text-align: justify;
+  }
+
+  /* Main column */
+  .main-edu-cp {
+    -ms-flex: 50%;
+    /* IE10 */
+    flex: 50%;
+    /* background-color: white; */
+    padding: 20px;
+  }
   /* -------------------------- Footer ---------------------------------*/
   .footer {
     padding: 20px;
@@ -92,12 +112,32 @@
 
   .EducationLogo {
     border-radius: 50%;
-    width: 100px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 
   .EducationLogo:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
   }
+
+  .EducationLogoRect {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .EducationLogoRect:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  @media screen and (max-width: 700px){
+    .main-edu-cp{
+        text-align: center;
+    }
+}
 
 
   /*------------------------------------------------ Navigation Bar styles-----------------------------------------------------*/
