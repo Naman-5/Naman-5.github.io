@@ -199,3 +199,47 @@
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+
+/* --------Skills-----------*/
+
+.LanguageLogo {
+  border-radius: 50%;
+  width: 68px;
+}
+/* angled div */
+.slanted-div {
+  position: relative;
+  padding: 10px 0;
+  background: #1f2833;
+  color: #c5c6c7;
+  overflow: visible;
+  z-index: 1;
+}
+
+/* where the magic happens */
+.slanted-div:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  transform-origin: left top;
+  transform: skewY(-3deg);
+}
+
+.slanted-div:after {
+  bottom: 0;
+  transform-origin: left bottom;
+  transform: skewY(3deg);
+}
+
+/* displays the content inside, as these settings in the parent breaks the effect */
+.slanted-div div {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+.slanted-div h1, .slanted-div h3{
+  text-align: center;
+}
