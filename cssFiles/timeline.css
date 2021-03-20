@@ -3,7 +3,7 @@
 /* Colors */
 /* Calculations */
 /* Placeholders */
- @media (min-width: 1800px) {
+ @media (min-width: 1000px) {
 	 #timeline .demo-card:nth-child(odd) .head::after, #timeline .demo-card:nth-child(even) .head::after {
 		 position: absolute;
 		 content: "";
@@ -45,10 +45,7 @@
  * {
 	 box-sizing: border-box;
 }
-/* Fonts */
- body {
-	 font-family: Roboto;
-}
+
  #timeline {
 	 padding: 100px 0;
 	 background: #f7f7f7;
@@ -71,12 +68,14 @@
 	 position: relative;
 	 margin: auto;
 }
- @media (min-width: 1800px) {
+ @media (min-width: 1000px) {
 	 #timeline .demo-card-wrapper {
 		 display: flex;
 		 flex-flow: column wrap;
 		 width: 1170px;
-		 height: 1650px;
+		 /*Edit this line when adding more items to the time
+		 line*/
+		 height: 500px;
 		 margin: 0 auto;
 	}
 }
@@ -89,7 +88,7 @@
 	 left: 50%;
 	 border-left: 1px solid rgba(191, 191, 191, 0.4);
 }
- @media (min-width: 1800px) {
+ @media (min-width: 1000px) {
 	 #timeline .demo-card-wrapper::after {
 		 border-left: 1px solid #bdbdbd;
 	}
@@ -112,7 +111,7 @@
 		 max-width: 40%;
 	}
 }
- @media (min-width: 1800px) {
+ @media (min-width: 1000px) {
 	 #timeline .demo-card {
 		 max-width: 450px;
 		 height: 400px;
@@ -194,15 +193,16 @@
 	 border-top: 0;
 	 padding: 15px;
 }
- @media (min-width: 1800px) {
+ @media (min-width: 1000px) {
 	 #timeline .demo-card .body {
 		 height: 315px;
 	}
 }
  #timeline .demo-card .body p {
-	 font-size: 14px;
+	 font-size: 20px;
 	 line-height: 18px;
 	 margin-bottom: 15px;
+	 text-align: justify;
 }
  #timeline .demo-card .body img {
 	 display: block;

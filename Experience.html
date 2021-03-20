@@ -3,6 +3,8 @@
   <head>
     <title>Page Title</title>
     <meta charset="UTF-8" />
+    <!-- Load an icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./cssFiles/experiencePage.css" />
     <link rel="stylesheet" type="text/css" href="./cssFiles/timeline.css"/>
@@ -31,13 +33,13 @@
       <a href="./Experience.html"><i class="fa fa-fw fas fa-graduation-cap"></i>Experience</a>
     </div>
     <!--------------------------------------------------Timeline------------------------------------------------------>
-    <section id=timeline>
+    <section id="timeline" style="font-family: Roboto;">
       <h1>Work Experience</h1>
       <br><br/>
       <div class="demo-card-wrapper">
-
         
-        <div class="demo-card demo-card--step1">
+        <!-- Make addition to position array in naManagement.js file when adding a new card to the timeline -->
+        <div id="gfgPos" class="demo-card demo-card--step1">
           <div class="head">
             <div class="number-box">
               <span><img title="GeeksforGeeks Society of Bennett" style="width: 80px;background-color: white;" src="./Positions/GFG_bu.png"/></span>
@@ -45,11 +47,15 @@
             <h2>Social Media Head<span class="small">Jul 2020 - Present</span> </h2>
           </div>
           <div class="body">
-            <span class="small">GeeksforGeeks Society - Bennett University</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+            <span style="font-size: 20px;">GeeksforGeeks Society - Bennett University</span>
+            <p>The Geeks for Geeks society is a society of programmers. It organizes workshops, webinars and other coding events.</p>
+            <ul style="text-align: justify;font-size: 18px;">
+              <li>I manage the Social Media handles for the society and help them promote the events that are planned.</li>
+              <li>I actively take part in the planning and discussion stage of the events</li>
+            </ul>
           </div>
-        </div>
-        
+        </div> 
+             
         
       </div>
     </section>
