@@ -94,4 +94,16 @@
   .sidebar a {font-size: 18px;}
 }
 
-/*------------------------------------Timeline--------------------------------*/
+/*------------------------------------badges--------------------------------*/
+.containerBadge {
+  background-color:#2E4272;
+  display:flex;
+}
+.fixed {
+  background-color:#4F628E;
+  width: 200px;
+}
+.flex-item {
+  background-color:#7887AB;
+  flex-grow: 1;
+}
