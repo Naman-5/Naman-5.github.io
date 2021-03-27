@@ -1,112 +1,101 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Page Title</title>
-    <meta charset="UTF-8" />
-    <!-- Load an icon library -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./cssFiles/experiencePage.css" />
-    <link rel="stylesheet" type="text/css" href="./cssFiles/timeline.css" />
-    <script src="./Scripts/navManagementExp.js"></script>
-  </head>
-  <body>
-    <!--------------------------------------------------------Header----------------------------------------->
-    <section class="header-slanted-div">
-      <div class="container">
-        <!-- Adding the navbar button to the banner -->
-        <div id="main">
-          <button class="openbtn" onclick="openCloseNav()">☰</button>
+
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8" />
+  <!-- Load an icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./cssFiles/experiencePage.css" />
+  <link rel="stylesheet" type="text/css" href="./cssFiles/timeline.css" />
+  <script src="./Scripts/navManagementExp.js"></script>
+</head>
+
+<body>
+  <!--------------------------------------------------------Header----------------------------------------->
+  <section class="header-slanted-div">
+    <div class="container">
+      <!-- Adding the navbar button to the banner -->
+      <div id="main">
+        <button class="openbtn" onclick="openCloseNav()">☰</button>
+      </div>
+    </div>
+    <br />
+    <div style="padding: 10px">
+      <h1 style="color: #66fcf1; font-size: 2.5em; font-family: Roboto">
+        Experience
+      </h1>
+    </div>
+  </section>
+  <!-- navbar contains links to various sections -->
+  <div id="mySidebar" class="sidebar">
+    <a href="./index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="./Articles.html"><i class="fa fa-fw fas fa-edit"></i>Articles</a>
+    <a href="./Projects.html"><i class="fa fa-fw fa-code-fork"></i>Projects</a>
+    <!-- <a href="./skills.html"><i class="fa fa-fw fas fa-code"></i>Skills</a> -->
+    <a href="./Experience.html"><i class="fa fa-fw fas fa-graduation-cap"></i>Experience</a>
+  </div>
+  <!--------------------------------------------------Timeline------------------------------------------------------>
+  <section id="timeline" style="font-family: Roboto">
+    <h1>Work Experience</h1>
+    <br /><br />
+    <div class="demo-card-wrapper">
+      <!-- Make addition to position array in naManagement.js file when adding a new card to the timeline -->
+      <div id="gfgPos" class="demo-card demo-card--step1">
+        <div class="head">
+          <div class="number-box">
+            <span><img title="GeeksforGeeks Society of Bennett" style="width: 80px; background-color: white"
+                src="./Positions/GFG_bu.png" /></span>
+          </div>
+          <h2>
+            Social Media Head<span class="small">Jul 2020 - Present</span>
+          </h2>
+        </div>
+        <div class="body">
+          <span style="font-size: 20px">GeeksforGeeks Society - Bennett University</span>
+          <p>
+            The Geeks for Geeks society is a society of programmers. It
+            organizes workshops, webinars and other coding events.
+          </p>
+          <ul style="text-align: justify; font-size: 18px">
+            <li>
+              I manage the Social Media handles for the society and help them
+              promote the events that are planned.
+            </li>
+            <li>
+              I actively take part in the planning and discussion stage of the
+              events
+            </li>
+          </ul>
         </div>
       </div>
-      <br />
-      <div style="padding: 10px">
-        <h1 style="color: #66fcf1; font-size: 2.5em; font-family: Roboto">
-          Experience
-        </h1>
-      </div>
-    </section>
-    <!-- navbar contains links to various sections -->
-    <div id="mySidebar" class="sidebar">
-      <a href="./index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-      <a href="./Articles.html"><i class="fa fa-fw fas fa-edit"></i>Articles</a>
-      <a href="./Projects.html"
-        ><i class="fa fa-fw fa-code-fork"></i>Projects</a
-      >
-      <!-- <a href="./skills.html"><i class="fa fa-fw fas fa-code"></i>Skills</a> -->
-      <a href="./Experience.html"
-        ><i class="fa fa-fw fas fa-graduation-cap"></i>Experience</a
-      >
     </div>
-    <!--------------------------------------------------Timeline------------------------------------------------------>
-    <section id="timeline" style="font-family: Roboto">
-      <h1>Work Experience</h1>
-      <br /><br />
-      <div class="demo-card-wrapper">
-        <!-- Make addition to position array in naManagement.js file when adding a new card to the timeline -->
-        <div id="gfgPos" class="demo-card demo-card--step1">
-          <div class="head">
-            <div class="number-box">
-              <span
-                ><img
-                  title="GeeksforGeeks Society of Bennett"
-                  style="width: 80px; background-color: white"
-                  src="./Positions/GFG_bu.png"
-              /></span>
-            </div>
-            <h2>
-              Social Media Head<span class="small">Jul 2020 - Present</span>
-            </h2>
-          </div>
-          <div class="body">
-            <span style="font-size: 20px"
-              >GeeksforGeeks Society - Bennett University</span
-            >
-            <p>
-              The Geeks for Geeks society is a society of programmers. It
-              organizes workshops, webinars and other coding events.
-            </p>
-            <ul style="text-align: justify; font-size: 18px">
-              <li>
-                I manage the Social Media handles for the society and help them
-                promote the events that are planned.
-              </li>
-              <li>
-                I actively take part in the planning and discussion stage of the
-                events
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+  </section>
 
-    <!------------------------------------------------- Badges ------------------------------------------------------->
-    <h1 style="font-size: 2em; text-align: center; font-family: Roboto">
-      Badges
-    </h1>
-    <div style="display: block; margin: auto; width: 90%">
-      <!--Badge 1 -->
-      <div style="display: inline-block">
-        <!--Embedding the badge from acclaim using code from their site-->
-        <!--Data Visualization with Python from cognitiveclass.ai-->
-        <div
-          data-iframe-width="200"
-          data-iframe-height="270"
-          data-share-badge-id="bd3baf43-4973-4af9-9ecd-c8f89bb0321a"
-          data-share-badge-host="https://www.youracclaim.com"
-        ></div>
-        <script
-          type="text/javascript"
-          async
-          src="//cdn.youracclaim.com/assets/utilities/embed.js"
-        ></script>
-      </div>
-
-      <!--Badge 2-->
+  <!------------------------------------------------- Badges ------------------------------------------------------->
+  <h1 style="font-size: 2em; text-align: center; font-family: Roboto">
+    Badges
+  </h1>
+  <div style="display: block; margin: auto; width: 90%">
+    <!--Badge 1 -->
+    <div style="display: inline-block">
+      <!--Embedding the badge from acclaim using code from their site-->
+      <!--Data Visualization with Python from cognitiveclass.ai-->
+      <div data-iframe-width="200" data-iframe-height="270" data-share-badge-id="bd3baf43-4973-4af9-9ecd-c8f89bb0321a"
+        data-share-badge-host="https://www.youracclaim.com"></div>
+      <script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
     </div>
-  </body>
+
+    <!--Badge 2-->
+    <div style="display: inline-block">
+      <div data-iframe-width="200" data-iframe-height="270" data-share-badge-id="efa3c51c-243c-47ac-ac75-57c6be743574"
+      data-share-badge-host="https://www.youracclaim.com"></div>
+    <script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
+    </div>
+    
+    <!--Badge 3-->
+  </div>
+</body>
+
 </html>
