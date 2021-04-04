@@ -5,14 +5,12 @@
   <title>Home - Naman Mayer</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <!-- Latest compiled and minified CSS -->
-   <link
-   rel="stylesheet"
-   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
- />
-  <link rel="stylesheet" href="./cssFiles/homePage.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./cssFiles/homePage.css" />
+  <link rel="stylesheet" href="./cssFiles/qualifications.css" />
   <!-- Load an icon library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Popper JS -->
@@ -20,8 +18,10 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="./Scripts/navManagement.js"></script>
+  <script src="./Scripts/manageCards.js"></script>
 </head>
-<body>
+
+<body onload="typeWriter()">
   <!----------------------------------------------------------------- Header Section (begins) ------------------------------------------------------------------->
   <section class="header-slanted-div">
     <div class="container">
@@ -30,28 +30,41 @@
         <button class="openbtn" onclick="openCloseNav()">☰</button>
       </div>
     </div>
-    <br />
-    <div style="padding: 10px;">
-      <h1 style="color: #66fcf1;font-size:2.5em;font-family: Roboto;">Hi I'm Naman.</h1>
+    <br><br />
+    <div style="padding: 10px">
+      <h1 style="color: #66fcf1; font-size: 2.5em; font-family: Roboto">
+        Hi I'm Naman.
+      </h1>
       <div class="row-main">
         <div class="main">
-          <p style="margin-left: 1%;width: 99%;font-size: 22px;text-align: justify;">
-            I am a B.Tech. Computer Science student at Bennett University, Greater
-            Noida.
+          <p style="
+                margin-left: 1%;
+                width: 99%;
+                font-size: 22px;
+                text-align: justify;
+              ">
+            I am a B.Tech. Computer Science student at Bennett University,
+            Greater Noida.
           </p>
-          <p style="margin-left: 1%;width: 99%;font-size: 22px;text-align: justify;">
-            So what made me pursue Computer Science and Engineering in the first
-            place? Computers are everywhere, they not only make our task easier,
-            our days more productive & efficient but above all connect people.
-            Connecting people from different regions opens up a world of
-            opportunities and being a computer science engineer puts me at the
-            forefront of all this action. The tremendous amounts of possibilities
-            and the opportunity to make the world a better place is what drives me
-            and motivates me to gain more knowledge about these powerful machines.
+          <p style="
+                margin-left: 1%;
+                width: 99%;
+                font-size: 22px;
+                text-align: justify;
+              ">
+            So what made me pursue Computer Science and Engineering in the
+            first place? Computers are everywhere, they not only make our task
+            easier, our days more productive & efficient but above all connect
+            people. Connecting people from different regions opens up a world
+            of opportunities and being a computer science engineer puts me at
+            the forefront of all this action. The tremendous amounts of
+            possibilities and the opportunity to make the world a better place
+            is what drives me and motivates me to gain more knowledge about
+            these powerful machines.
           </p>
         </div>
         <div class="side">
-          <img style="border-radius: 50%; width: 320px;" src="./ArtWork/myPotrait.png"/>
+          <img style="border-radius: 50%; width: 320px" src="./ArtWork/myPotrait.png" />
         </div>
       </div>
     </div>
@@ -61,81 +74,84 @@
   <!----------------------------------------------------------------- SideBar Menu (begins) ------------------------------------------------------------------->
   <div id="mySidebar" class="sidebar">
     <a href="./index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-    <a href="./Articles.html"><i class="fa fa-fw fas fa-edit"></i>Articles</a>
+    <!-- <a href="./Articles.html"><i class="fa fa-fw fas fa-edit"></i>Articles</a> -->
     <a href="./Projects.html"><i class="fa fa-fw fa-code-fork"></i>Projects</a>
     <!-- <a href="./skills.html"><i class="fa fa-fw fas fa-code"></i>Skills</a> -->
     <a href="./Experience.html"><i class="fa fa-fw fas fa-graduation-cap"></i>Experience</a>
   </div>
   <!----------------------------------------------------------------- SideBar Menu (ends) ------------------------------------------------------------------->
-  <br><br/>
-  <br><br/>
-  <!----------------------------------------------------------------- Current Position (starts) ------------------------------------------------------------------->
-    <div id="positionBlock" style="margin-left: 1%; font-size: 1.5em;">
-      <h1 style="margin-left: 1%; text-align: center;font-family: Roboto;">Current Position</h1>
-      <div class="row-main">
-        <div class="side-edu-cp" >
-          <img src="./Positions/GFG_bu.png" class="EducationLogo">
-        </div>
-  
-        <div class="main-edu-cp">
-              <h3>Social Media Head</h3>
-              <pre>
-GeeksforGeeks Society
-Bennett University
-Jul 2020 - Present
-              </pre>
-        </div>
-      </div>
-    </div>
-  <!----------------------------------------------------------------- Current Position (ends) ------------------------------------------------------------------->
-  <!----------------------------------------------------------------- Education (begins) ------------------------------------------------------------------->
-  <div id="eduBlock" style="margin-left: 1%; font-size: 1.5em;">
-    <h1 style="margin-left: 1%;text-align: center;font-family: Roboto;">Education</h1>
-    <div class="row-main">
-      <div class="side-edu-cp" >
-        <img src="./LanguageLogos/Bennett.webp"  class="EducationLogoRect">
-      </div>
 
-      <div class="main-edu-cp">
-            <h3>B.Tech. CSE</h3>
-            <pre>
-Bennett University
-Greater Noida, India
-2019 - 2023
-            </pre>
+  <script type="text/javascript">
+    function resizeIframe(iframe) {
+      iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    }
+  </script>
+  <!-- <iframe onload="resizeIframe(this)" src="qualifications.html" title="W3Schools Free Online Web Tutorials" width="80%" height="500" style="margin-left: auto;margin-right: auto; display: block; border-radius: 15px;
+  border-color: transparent;"></iframe> -->
+
+  <!----------------------------------------------------------------- Education (begins) ------------------------------------------------------------------->
+  <section id=timeline>
+    <h1>Education</h1>
+    <div class="demo-card-wrapper">
+  
+      <div class="demo-card demo-card--step4">
+        <div class="head">
+          <div class="number-box">
+            <span><img title="Bennett University" style="width: 80px; background-color: white"
+              src="./LanguageLogos/Bennett.webp" /></span>
+          </div>
+          <h2>
+            B.Tech. CSE<span class="small">2019 - Present</span>
+          </h2>
+        </div>
+        <div class="body">
+          <span style="font-size: 20px">Bennett University</span>
+          <p style="font-size: 16px;">
+            Greater Noida, UP, India
+          </p>
+          <ul style="text-align: left; font-size: 15px">
+            <!-- <li>
+              I manage the Social Media handles for the society and help them
+              promote the events that are planned.
+            </li> -->
+            <li>
+              Social Media Head :- GeeksforGeeks Society Jul 2020 - Present
+            </li>
+          </ul>
+        </div>
       </div>
+      
     </div>
-  </div>
+  </section>
   <!----------------------------------------------------------------- Education (ends) ------------------------------------------------------------------->
-  <br><br/>
-  <br><br/>
-  <br><br/>
   <!-----------------------------------------------------------------Skills (begins) --------------------------------------------------------------------->
   <section class="slanted-div">
     <div>
-      <h1 style="color: #66fcf1;font-size:2em;font-family: Roboto;">Skills</h1>
-      <br><br/>
+      <h1 style="color: #66fcf1; font-size: 2em; font-family: Roboto">
+        Skills
+      </h1>
+      <br /><br />
       <h3>Languages</h3>
       <div>
-        <p style="text-align: center;">
-          <img src="./LanguageLogos/CPP logo.png" title="C++" class="LanguageLogo"/> 
-          <img src="./LanguageLogos/Python.png" title="Python" class="LanguageLogo"/> 
-          <img src="./LanguageLogos/Java.png" title="Java" class="LanguageLogo"/>
-          <img src="./LanguageLogos/JavaScript.png" title="JavaScript" class="LanguageLogo"/> 
-          <img src="./LanguageLogos/HTML.png" title="HTML" class="LanguageLogo"/> 
-          <img src="./LanguageLogos/CSS.png" title="CSS" class="LanguageLogo"/>
-          <img src="./LanguageLogos/Mysql.png" title="MySQL" class="LanguageLogo"/>
+        <p style="text-align: center">
+          <img src="./LanguageLogos/CPP logo.png" title="C++" class="LanguageLogo" />
+          <img src="./LanguageLogos/Python.png" title="Python" class="LanguageLogo" />
+          <img src="./LanguageLogos/Java.png" title="Java" class="LanguageLogo" />
+          <img src="./LanguageLogos/JavaScript.png" title="JavaScript" class="LanguageLogo" />
+          <img src="./LanguageLogos/HTML.png" title="HTML" class="LanguageLogo" />
+          <img src="./LanguageLogos/CSS.png" title="CSS" class="LanguageLogo" />
+          <img src="./LanguageLogos/Mysql.png" title="MySQL" class="LanguageLogo" />
         </p>
       </div>
       <h3>Frameworks & Technologies</h3>
       <div>
-        <p style="text-align: center;">
-          <img src="./LanguageLogos/AndroidStudio.jpg" title="Android Development" class="LanguageLogo"/> 
-          <img src="./LanguageLogos/ReactJS.png" title="ReactJS" class="LanguageLogo"/> 
-          <img src="./LanguageLogos/Firebase.png" title="Firebase" class="LanguageLogo"/> 
-          <img src="./LanguageLogos/Github.png" title="Git and GitHub" class="LanguageLogo"/> 
-          <img src="./LanguageLogos/NodeJS.jpg" title="NodeJS" class="LanguageLogo"/> 
-          <br><br/>
+        <p style="text-align: center">
+          <img src="./LanguageLogos/AndroidStudio.jpg" title="Android Development" class="LanguageLogo" />
+          <img src="./LanguageLogos/ReactJS.png" title="ReactJS" class="LanguageLogo" />
+          <img src="./LanguageLogos/Firebase.png" title="Firebase" class="LanguageLogo" />
+          <img src="./LanguageLogos/Github.png" title="Git and GitHub" class="LanguageLogo" />
+          <img src="./LanguageLogos/NodeJS.jpg" title="NodeJS" class="LanguageLogo" />
+          <br /><br />
           &copy; 2021
         </p>
       </div>
@@ -144,4 +160,5 @@ Greater Noida, India
   <!-----------------------------------------------------------------Skills (ends) --------------------------------------------------------------------->
   <!-- <div class="footer">Footer</div> -->
 </body>
+
 </html>
