@@ -59,12 +59,28 @@
     padding: 20px;
     text-align: justify;
   }
+  .side-phone{
+    -ms-flex: 40%;
+    /* IE10 */
+    flex: 45%;
+    /* background-color: #f1f1f1; */
+    padding: 20px;
+    text-align: justify;
+  }
 
   /* Main column */
-  .main {
+
+  .main{
     -ms-flex: 70%;
     /* IE10 */
     flex: 70%;
+    /* background-color: white; */
+    padding: 20px;
+  }
+  .main-phone {
+    -ms-flex: 60%;
+    /* IE10 */
+    flex: 55%;
     /* background-color: white; */
     padding: 20px;
   }
@@ -82,58 +98,71 @@
       width: 100%;
     }
   }
-
-  /* for education and current position */
-   /* Sidebar/left column */
-   .side-edu-cp{
-    -ms-flex: 50%;
-    /* IE10 */
-    flex: 50%;
-    /* background-color: #f1f1f1; */
-    padding: 20px;
-    text-align: justify;
-  }
-
-  /* Main column */
-  .main-edu-cp {
-    -ms-flex: 50%;
-    /* IE10 */
-    flex: 50%;
-    /* background-color: white; */
-    padding: 20px;
-  }
   /* -------------------------- Footer ---------------------------------*/
-  .footer {
-    padding: 20px;
-    /* background-color: #1abc9c; */
-    text-align: center;
-    background: #333;
-    color: white;
-  }
-
-  .EducationLogo {
-    border-radius: 50%;
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-
-
-  .EducationLogoRect {
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-
-  @media screen and (max-width: 700px){
-    .main-edu-cp{
-        text-align: center;
-    }
+  Edit in JSFiddle
+Result
+HTML
+CSS
+Resources
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
 }
 
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
 
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
   /*------------------------------------------------ Navigation Bar styles-----------------------------------------------------*/
   .container
   {
@@ -236,4 +265,43 @@
 }
 .slanted-div h1, .slanted-div h3{
   text-align: center;
+}
+
+/* image gallery  */
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  cursor: pointer;
+}
+
+div.gallery img {
+  width: 250px;
+  height: 150px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+@media screen and (max-width: 1300px) {
+  div.gallery img {
+    width: 200px;
+    height: 100px;
+  }
+  div.gallery {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1135px){
+  div.gallery 
+  {
+    display: none;
+  }
 }

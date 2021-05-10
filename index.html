@@ -19,6 +19,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="./Scripts/navManagement.js"></script>
   <script src="./Scripts/manageCards.js"></script>
+  <script src="./Scripts/galleryManager.js"></script>
 </head>
 
 <body onload="typeWriter()">
@@ -83,22 +84,19 @@
 
   <script type="text/javascript">
     function resizeIframe(iframe) {
-      iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+      iframe.height = iframe.contentWindow.document.body.scrollHeight + 10 + "px";
     }
   </script>
-  <!-- <iframe onload="resizeIframe(this)" src="qualifications.html" title="W3Schools Free Online Web Tutorials" width="80%" height="500" style="margin-left: auto;margin-right: auto; display: block; border-radius: 15px;
-  border-color: transparent;"></iframe> -->
-
   <!----------------------------------------------------------------- Education (begins) ------------------------------------------------------------------->
   <section id=timeline>
-    <h1>Education</h1>
+    <h1><u>Education & Skills</u></h1>
     <div class="demo-card-wrapper">
-  
+
       <div class="demo-card demo-card--step4">
         <div class="head">
           <div class="number-box">
             <span><img title="Bennett University" style="width: 80px; background-color: white"
-              src="./LanguageLogos/Bennett.webp" /></span>
+                src="./LanguageLogos/Bennett.webp" /></span>
           </div>
           <h2>
             B.Tech. CSE<span class="small">2019 - Present</span>
@@ -120,45 +118,92 @@
           </ul>
         </div>
       </div>
-      
+
+      <!-- add new cards here  -->
+
+    </div>
+    <br />
+    <!----------------------------------------------------------------- Education (ends) ------------------------------------------------------------------->
+    <div class="row-main">
+      <div class="side-phone">
+        <p style="font-size: 20px;margin-left: 2%;margin-right: 2%;">
+          The Tech industry is ever-evolving, pushing the boundaries of what we as humans can achieve & if you're not
+          learning, you're not moving forward. I love learning to work with new tools & frameworks and enjoy building
+          cool new projects.
+          
+          I am a Linux enthusiast and enjoy trying out and learning about various distributions currently available and
+          under development. I mostly work with Debian based Linux distributions because they are stable and do not
+          follow a rolling release model.
+        </p>
+
+        <p style="font-size: 20px;margin-left: 2%;margin-right: 2%;">
+          I am a team player and look forward to work with a team where members have a diverse skillset. I believe that a great
+          team makes any project successful, and therefore all members must adapt to working together as one unit.
+        </p>
+
+        <div class="gallery" onclick="document.location.href='./Projects.html'" style="width: 14.1em;" id="galleryItem1" >
+          <img src="./ArtWork/ImageGalleryProjects.jpg" alt="Cinque Terre" style="width:14em;">
+          <div class="desc">My projects</div>
+        </div>
+
+        <div class="gallery" onclick="document.location.href='./Experience.html'" style="width: 14.1em;"id="galleryItem2">
+          <img src="./ArtWork/ImageGalleryExperience.jpg" alt="Cinque Terre" style="width:14em;">
+          <div class="desc">Work Experience</div>
+        </div>
+
+        <!-- <div class="gallery" onclick="document.location.href='./Experience.html'" style="width: 14.1em;"id="galleryItem3">
+          <img src="./ArtWork/ImageGalleryExperience.jpg" alt="Cinque Terre" style="width:14em;">
+          <div class="desc">Work Experience</div>
+        </div>
+
+        <div class="gallery" onclick="document.location.href='./Experience.html'" style="width: 14.1em;"id="galleryItem4">
+          <img src="./ArtWork/ImageGalleryExperience.jpg" alt="Cinque Terre" style="width:14em;">
+          <div class="desc">Work Experience</div>
+        </div>
+
+        <div class="gallery" onclick="document.location.href='./Experience.html'" style="width: 14.1em;"id="galleryItem5">
+          <img src="./ArtWork/ImageGalleryExperience.jpg" alt="Cinque Terre" style="width:14em;">
+          <div class="desc">Work Experience</div>
+        </div>
+
+        <div class="gallery" onclick="document.location.href='./Experience.html'" style="width: 14.1em;"id="galleryItem6">
+          <img src="./ArtWork/ImageGalleryExperience.jpg" alt="Cinque Terre" style="width:14em;">
+          <div class="desc">Work Experience</div>
+        </div> -->
+
+      </div>
+      <!-----------------------------------------------------------------Skills (begins) --------------------------------------------------------------------->
+      <div class="main-phone">
+        <iframe onload="resizeIframe(this)" src="desktop.html" title="" width="400px" height="500" style="margin-left: auto;margin-right: auto; display: block; border-radius: 15px;
+    border-color: transparent; overflow-y: hidden;"></iframe>
+      </div>
+      <!-----------------------------------------------------------------Skills (ends) --------------------------------------------------------------------->
     </div>
   </section>
-  <!----------------------------------------------------------------- Education (ends) ------------------------------------------------------------------->
-  <!-----------------------------------------------------------------Skills (begins) --------------------------------------------------------------------->
+  <!-----------------------------------------------------------------Footer(begins) --------------------------------------------------------------------->
   <section class="slanted-div">
     <div>
-      <h1 style="color: #66fcf1; font-size: 2em; font-family: Roboto">
-        Skills
-      </h1>
-      <br /><br />
-      <h3>Languages</h3>
-      <div>
-        <p style="text-align: center">
-          <img src="./LanguageLogos/CPP logo.png" title="C++" class="LanguageLogo" />
-          <img src="./LanguageLogos/Python.png" title="Python" class="LanguageLogo" />
-          <img src="./LanguageLogos/Java.png" title="Java" class="LanguageLogo" />
-          <img src="./LanguageLogos/JavaScript.png" title="JavaScript" class="LanguageLogo" />
-          <img src="./LanguageLogos/HTML.png" title="HTML" class="LanguageLogo" />
-          <img src="./LanguageLogos/CSS.png" title="CSS" class="LanguageLogo" />
-          <img src="./LanguageLogos/Mysql.png" title="MySQL" class="LanguageLogo" />
-        </p>
-      </div>
-      <h3>Frameworks & Technologies</h3>
-      <div>
-        <p style="text-align: center">
-          <img src="./LanguageLogos/AndroidStudio.jpg" title="Android Development" class="LanguageLogo" />
-          <img src="./LanguageLogos/ReactJS.png" title="ReactJS" class="LanguageLogo" />
-          <img src="./LanguageLogos/Firebase.png" title="Firebase" class="LanguageLogo" />
-          <img src="./LanguageLogos/Github.png" title="Git and GitHub" class="LanguageLogo" />
-          <img src="./LanguageLogos/NodeJS.jpg" title="NodeJS" class="LanguageLogo" />
-          <br /><br />
-          &copy; 2021
-        </p>
+      <div class="footer-basic">
+        <footer>
+          <div class="social">
+            <a href="#"><i class="fa fa-telegram"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+            <!-- <a href="#"><i class="fab fa-discord"></i></a> -->
+          </div>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="./Projects.html">Projects</a></li>
+            <li class="list-inline-item"><a href="./Experience.html">Experience</a></li>
+            <li class="list-inline-item"><a href="#">Resume</a></li>
+            <!-- <li class="list-inline-item"><a href="#"></a></li> -->
+          </ul>
+          <p class="copyright">Naman Mayer © 2021</p>
+        </footer>
       </div>
     </div>
   </section>
-  <!-----------------------------------------------------------------Skills (ends) --------------------------------------------------------------------->
-  <!-- <div class="footer">Footer</div> -->
+  <!-----------------------------------------------------------------Footer(ends) --------------------------------------------------------------------->
 </body>
 
 </html>

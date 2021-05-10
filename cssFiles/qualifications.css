@@ -3,7 +3,7 @@
 /* Colors */
 /* Calculations */
 /* Placeholders */
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 	#timeline .demo-card:nth-child(odd) .head::after, #timeline .demo-card:nth-child(even) .head::after {
 		position: absolute;
 		content: "";
@@ -71,13 +71,13 @@
 	position: relative;
 	margin: auto;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 	#timeline .demo-card-wrapper {
 		display: flex;
 		flex-flow: column wrap;
 		width: 1170px;
 		/* ----------------------------------------------- for timeline height adjustment ------------------------------------- */
-		height: 350px;
+		height: 375px;
 		margin: 0 auto;
    }
 }
@@ -90,7 +90,7 @@
 	left: 50%;
 	border-left: 1px solid rgba(191, 191, 191, 0.4);
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 	#timeline .demo-card-wrapper::after {
 		border-left: 1px solid #bdbdbd;
    }
@@ -110,10 +110,10 @@
 }
 @media (min-width: 720px) {
 	#timeline .demo-card {
-		max-width: 40%;
+		max-width: 50%;
    }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 	#timeline .demo-card {
 		max-width: 450px;
 		/* ----------------------------------------------- for content height adjustment ------------------------------------- */
@@ -172,12 +172,12 @@
 	letter-spacing: 2px;
 	margin: 0;
 	padding-bottom: 6px;
-	line-height: 1rem;
+	line-height: normal;
 }
 @media (min-width: 480px) {
 	#timeline .demo-card .head h2 {
 		font-size: 165%;
-		line-height: 1.2rem;
+		line-height: normal;
    }
 }
 #timeline .demo-card .head h2 span {
@@ -196,7 +196,7 @@
 	border-top: 0;
 	padding: 15px;
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 	#timeline .demo-card .body {
 		/* ----------------------------------------------- for content height adjustment ------------------------------------- */
 		height: auto;

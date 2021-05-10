@@ -2,251 +2,581 @@
 <html>
 
 <head>
-    <style>
-        html {
-	box-sizing: border-box;
-	font-size: 10px;
+	<style>
+		body,
+		html {
+			height: 100%;
+		}
+
+		* {
+			padding: 0;
+			margin: 0;
+			text-decoration: none;
+			font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+			color: #333;
+		}
+
+		a {
+			color: #333;
+		}
+
+		p {
+			font-size: 12px;
+			line-height: 18px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 40px;
+		}
+
+		section {
+			margin-bottom: 40px;
+		}
+
+		h2 {
+			font-size: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+			font-weight: 300;
+			margin-bottom: 10px;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		.phone {
+			margin: 0 auto;
+			width: 395px;
+			height: 667px;
+			padding: 50px 0 80px;
+			background: #ccc;
+			border-radius: 25px;
+			position: relative;
+		}
+
+		.phone__screen {
+			margin: 0 auto;
+			height: 667px;
+			background: #fff;
+			position: relative;
+			overflow: hidden;
+			background: #f2f2f2;
+			width: 375px;
+		}
+
+		.phone:after,
+		.phone:before {
+			position: absolute;
+			background: #999;
+			content: "";
+			display: block;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		.phone:after {
+			top: 20px;
+			height: 8px;
+			width: 60px;
+			border-radius: 4px;
+		}
+
+		.phone:before {
+			width: 40px;
+			height: 40px;
+			bottom: 20px;
+			border-radius: 100%;
+		}
+
+		.content {
+			position: relative;
+			z-index: 3;
+			height: 667px;
+			padding: 54px 0 20px;
+			box-sizing: border-box;
+			box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
+			background: #f2f2f2;
+			overflow-x: hidden;
+			overflow-y: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		.header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 4;
+		}
+
+		.nav {
+			width: 0;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 12px;
+			line-height: 20px;
+			z-index: 2;
+			transition: width 0s linear 0.3s;
+		}
+
+		.nav a {
+			display: block;
+			padding: 12px 20px 12px;
+		}
+
+		.nav li:first-child {
+			margin-top: 44px;
+		}
+
+		.nav ul {
+			width: 220px;
+			height: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;
+			-webkit-overflow-scrolling: touch;
+			position: absolute;
+			left: 0;
+			top: 0;
+			/* transform: translate3d(-220px, 0, 0);
+	 */
+			background: #fff;
+		}
+
+		.content,
+		.header {
+			transition: transform 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+			transform: translate3d(0px, 0, 0);
+			backface-visiblity: hidden;
+		}
+
+		#show-nav:checked+.phone__screen .nav ul,
+		#show-nav:checked+.phone__screen .header,
+		#show-nav:checked+.phone__screen .content {
+			transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		}
+
+		.content div {
+			position: relative;
+		}
+
+		.trigger {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 20px;
+			height: 20px;
+			padding: 17px 12px;
+			display: block;
+			z-index: 10;
+			background: transparent;
+		}
+
+		.trigger a {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.trigger a:first-child {
+			display: block;
+		}
+
+		.trigger i {
+			display: block;
+			height: 2px;
+			width: 20px;
+			background: #fff;
+			margin: 3px 0 4px;
+			transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		}
+
+		.title {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			font-weight: 300;
+			font-size: 16px;
+			height: 54px;
+			line-height: 54px;
+			/* text-transform: uppercase;
+	 */
+			letter-spacing: 0.01em;
+			background: #03a9f4;
+			color: #fff;
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+		}
+
+		.place {
+			width: 90px;
+			height: 90px;
+			background: #fff;
+			line-height: 160px;
+			text-align: center;
+			align-content: center;
+			border-radius: 50%;
+		}
+
+		#show-nav:checked+.phone__screen #nav {
+			transition: width 0s linear 0s;
+			width: 220px;
+		}
+
+		#show-nav:checked+.phone__screen #nav ul {
+			transform: none;
+		}
+
+		#show-nav:checked+.phone__screen .header,
+		#show-nav:checked+.phone__screen .content {
+			transform: translate3d(220px, 0, 0);
+		}
+
+		#show-nav:checked+.phone__screen .header .content__closer,
+		#show-nav:checked+.phone__screen .content .content__closer {
+			display: block;
+		}
+
+		#show-nav:checked+.phone__screen .header .trigger__closer {
+			display: block;
+		}
+
+		#show-nav:checked+.phone__screen .header i:first-child {
+			transform: translate3d(0, 6px, 0) rotate(45deg);
+		}
+
+		#show-nav:checked+.phone__screen .header i:first-child+i {
+			opacity: 0;
+		}
+
+		#show-nav:checked+.phone__screen .header i:first-child+i+i {
+			transform: translate3d(0, -6px, 0) rotate(-45deg);
+		}
+
+		.horizontal-nav {
+			font-size: 12px;
+			line-height: 20px;
+			overflow-x: auto;
+			overflow-y: hidden;
+			-webkit-overflow-scrolling: touch;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+
+		::-webkit-scrollbar {
+			width: 5px;
+			background: transparent;
+		}
+
+		.horizontal-nav__items {
+			white-space: nowrap;
+		}
+
+		.horizontal-nav--submenu {
+			background: #90caf9;
+			margin-top: 0;
+		}
+
+		.horizontal-nav li {
+			display: inline-block;
+			margin-left: 2px;
+		}
+
+		.horizontal-nav li+li {
+			margin-left: 0;
+		}
+
+		.horizontal-nav li:last-child {
+			margin-right: 2px;
+		}
+
+		.horizontal-nav a {
+			display: inline-block;
+			padding: 16px 16px;
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.toggle {
+			width: 50px;
+			height: 30px;
+			margin: 10px 0;
+			background: #fff;
+			/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
+	 */
+			display: inline-block;
+			vertical-align: top;
+			border-radius: 15px;
+			overflow: hidden;
+			position: relative;
+			transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		}
+
+		.toggle:after {
+			content: "";
+			width: 22px;
+			position: relative;
+			z-index: 2;
+			height: 22px;
+			margin: 4px;
+			background: #fff;
+			border-radius: 100%;
+			display: block;
+			transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			transform: translate3d(20px, 0, 0);
+		}
+
+		.toggle__label {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 0;
+			transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), height 0s linear 0.3s;
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		input[type='radio'],
+		input[type='checkbox'] {
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		label {
+			cursor: pointer;
+		}
+
+		#show-mobile:checked+input+.phone .toggle__label--off {
+			opacity: 1;
+			height: 100%;
+			transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), height 0s linear 0s;
+		}
+
+		#show-mobile:checked+input+.phone .toggle {
+			background: #8bc34a;
+		}
+
+		#hide-mobile:checked+.phone {
+			background: transparent;
+			padding: 0;
+			width: 100%;
+			max-width: 375px;
+			height: 100%;
+			/* .phone__screen {
+		 width: auto;
+		 max-width: 375px;
+	}
+	*/
+		}
+
+		#hide-mobile:checked+.phone .toggle__label--on {
+			opacity: 1;
+			height: 100%;
+			transition: opacity 0.3s ease, height 0s linear 0s;
+		}
+
+		#hide-mobile:checked+.phone .toggle {
+			background: #ccc;
+		}
+
+		#hide-mobile:checked+.phone .toggle:after {
+			transform: translate3d(0px, 0, 0);
+		}
+
+		#hide-mobile:checked+.phone .phone__screen,
+		#hide-mobile:checked+.phone .content {
+			height: 100%;
+			max-height: 667px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+
+		#hide-mobile:checked+.phone:before {
+			opacity: 0;
+		}
+
+		.toggle-ui {
+			padding: 0 20px;
+			background: #fff;
+			font-size: 12px;
+			overflow: hidden;
+			margin-bottom: 40px;
+		}
+
+		.toggle-ui dd {
+			width: 50px;
+			float: right;
+			margin: 3px 0;
+		}
+
+		.toggle-ui dt {
+			padding: 14px 0;
+			width: 150px;
+			float: left;
+		}
+
+		.toggle-ui small {
+			color: #999;
+		}
+
+		/*.phone, .phone__screen, .phone:before {
+	 disabling the transtion, doesn't run very smooth transition: all 0.3s $ease-out;
 }
+ */
+		.phone__screen {
+			width: 375px;
+			margin: 0 auto;
+		}
 
-*, *:before, *:after {
-	box-sizing: inherit;
-}
+		.content__closer,
+		.trigger__closer {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: none;
+			z-index: 12;
+		}
 
-body {
-	font-family: sans-serif;
-	margin: 0;
-	font-size: 1.5rem;
-	background-image: -webkit-linear-gradient(190deg, #f4bcbe 0%, #c5eaf7 100%);
-	background-image: linear-gradient(260deg, #f4bcbe 0%, #c5eaf7 100%);
-}
-
-a {
-	color: white;
-	text-decoration: none;
-}
-
-a.button {
-	background: rgba(0, 0, 0, 0.1);
-	padding: 1rem 1.5rem;
-	border-radius: 4px;
-}
-
-a.button:hover {
-	background: white;
-	padding: 1rem 1.5rem;
-	border-radius: 4px;
-	color:  rgba(0,0,0,0.7);
-}
-
-.app-wrap {
-	max-width: 540px;
-	height: 90vh;
-	margin: 5vh auto 5vh auto;
-	border: 10px solid rgba(0,0,0,0.8);
-	border-bottom-width: 70px;
-	border-radius: 10px;
-	box-shadow: 0 0 50px rgba0,0,0,0.3;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-}
-
-.app-wrap > * {
-	-webkit-box-flex: 1;
-	-webkit-flex: 1 1 auto;
-	    -ms-flex: 1 1 auto;
-	        flex: 1 1 auto;
-}
-
-.content {
-	padding: 20px;
-	background: white;
-	box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
-	line-height: 1.6;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling:touch;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	overflow-x: hidden;
-}
-
-.content > * {
-	-webkit-box-flex: 1;
-	-webkit-flex: 1 1;
-	    -ms-flex: 1 1;
-	        flex: 1 1;
-	max-width: 100%;
-}
-
-.straightup {
-	max-height: 200px;
-}
-
-
-.icon-bar a {
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
-	text-align: center;
-	padding: 1.5rem;
-	border-left: 1px solid rgba(0,0,0,0.1);
-	background: gray;
-	color: rgba(0,0,0,0.5);
-}
-
-.icon-bar a:hover {
-	color: #f4bcbe;
-}
-
-
-.icon-bar a:first-child {
-	border-left: 0;
-}
-
-.app-header {
-	background: rgba(0,0,0,0.7);
-	color: #f4bcbe;
-	padding: 1rem;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	text-align: center;
-}
-
-.icon-bar {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-basis: 70px;
-	    -ms-flex-preferred-size: 70px;
-	        flex-basis: 70px;
-	min-height: 70px;
-}
-
-
-    </style>
+		.LanguageLogo {
+			border-radius: 50%;
+			width: 60px;
+		}
+	</style>
 </head>
+<script type="text/javascript">
+	function resizeIframe(iframe) {
+		iframe.height = iframe.contentWindow.document.body.scrollHeight + 10 + "px";
+	}
+</script>
 
 <body>
-    <html>
-
-    <head>
-        <title>HH</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-        <link rel="stylesheet" type="text/css" href="build/styles.css">
-    </head>
-
-    <body>
-        <div class="app-wrap">
-            <header class="app-header">
-                <a href="#" class="button">
-                    <i class="fa fa-arrow-left"></i>
-                    Back
-                </a>
-
-                <h1>FlexBox Mobile</h1>
-
-                <a href="#" class="button">
-                    <i class="fa fa-cog"></i>
-                </a>
-            </header>
-
-            <div class="content">
-
-                <img class="straightup"
-                    src="https://images.unsplash.com/photo-1449024540548-94f5d5a59230?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=dec4b59ca06926527007bd98670f2800"
-                    alt="">
-
-                <p>This is an example of a responsive mobile UI layout using Flexbox. No matter what screen size, the
-                    layout should retain integrity and always render correctly. React Native actually uses this same
-                    grid system. Flexbox is extremely useful in its approach to justifying content and aligning items.
-                </p>
-
-                <p>
-                    Truffaut lumbersexual plaid, gluten-free meditation fixie pinterest fap pitchfork kombucha small
-                    batch sriracha etsy viral meh. Freegan hella iPhone swag synth, fixie food truck lomo ethical viral
-                    sustainable. Locavore chartreuse chillwave, fap kickstarter trust fund PBR&B cornhole. Aesthetic
-                    chia fashion axe polaroid, disrupt godard pitchfork sustainable synth hella next level portland
-                    williamsburg. Man bun mlkshk kogi green juice pour-over, before they sold out selfies shoreditch
-                    godard 8-bit sustainable. Cronut austin meditation, organic echo park art party scenester godard
-                    craft beer fashion axe shabby chic pickled chartreuse. Keffiyeh selfies DIY, brunch keytar marfa
-                    godard food truck direct trade photo booth you probably haven't heard of them fingerstache.
-                </p>
-
-                <p>
-                    Ugh cold-pressed wolf crucifix man braid hella. Vice XOXO mumblecore kombucha small batch deep v,
-                    williamsburg lomo godard kogi. Health goth pinterest trust fund vice listicle, bitters humblebrag 3
-                    wolf moon VHS tofu pop-up fingerstache. Skateboard schlitz irony, cardigan deep v sartorial
-                    portland. Fingerstache try-hard aesthetic, flannel meh kombucha swag church-key four dollar toast.
-                    Squid art party mixtape, green juice distillery tote bag deep v hella celiac plaid literally austin
-                    before they sold out actually. Master cleanse cray flannel, 3 wolf moon thundercats gochujang irony
-                    XOXO messenger bag bicycle rights drinking vinegar.
-                </p>
-
-                <p>
-                    Craft beer tofu pour-over, typewriter cold-pressed pug everyday carry. Flannel try-hard godard DIY
-                    small batch yr. DIY 8-bit direct trade, tilde swag pinterest kickstarter scenester everyday carry.
-                    Hoodie meh aesthetic single-origin coffee organic actually asymmetrical, gluten-free cred man bun
-                    letterpress. Migas ugh swag man bun cred, occupy wayfarers typewriter church-key forage street art.
-                    Ethical brooklyn food truck, organic viral pinterest tofu wayfarers small batch VHS hammock.
-                    Normcore food truck ugh try-hard shabby chic.
-                </p>
 
 
-            </div>
+	<div class="phone">
+		<input type="checkbox" id="show-nav" name="show-nav">
+		<div class="phone__screen">
+			<nav id="nav" class="nav">
+				<ul>
+					<li><a href="">Projects</a></li>
+					<li><a href="">Experience</a></li>
+					<li><a href="">Resume</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</nav>
+			<header class="header">
+				<label for="show-nav" class="trigger">
+					<div>
+						<i></i><i></i><i></i>
+					</div>
+				</label>
+				<h1 class="title">Tech Experience</h1>
+			</header>
+			<div class="content" id="content">
 
-            <div class="icon-bar">
-                <a href="#">
-                    <i class="fa fa-home"></i>
-                    <br>
-                    Home
-                </a>
-                <a href="#">
-                    <i class="fa fa-bell"></i>
-                    <br>
-                    Notifications
-                </a>
-                <a href="#">
-                    <i class="fa fa-envelope"></i>
-                    <br>
-                    Messages
-                </a>
-                <a href="#">
-                    <i class="fa fa-user"></i>
-                    <br>
-                    Me
-                </a>
-            </div>
-        </div>
+				<div>
+					<div>
+						<br>
+						<!-- Inside phone screen  -->
+						<h3 style="margin-left: 5%;">Current Position</h3>
+						<img src="./Positions/GFG_bu.png" width="110" style="display: block;margin-right: auto;margin-left: auto;border-radius: 50%;border-color: #03a9f4;border-style: solid;">
+						<br>
+						<h2 style="text-align: center;font-size: 15px;"> Social Media Head <br> GeeksforGeeks Society <br> Jul 2020 - Present</h2>
+						
 
-    </body>
+						<h3 style="margin-left: 5%;">Languages -></h3>
+						<div class="horizontal-nav">
+							<ul class="horizontal-nav__items">
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/CPP\ logo.png);background-size:contain;">
+									</div>
+								</li>
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/Python.png);background-size:contain;">
+									</div>
+								</li>
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/Java.png);background-size:contain;">
+									</div>
+								</li>
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/JavaScript.png);background-size:contain;">
+									</div>
+								</li>
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/HTML.png);background-size:contain;">
+									</div>
+								</li>
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/CSS.png);background-size:contain;">
+									</div>
+								</li>
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/Mysql.png);background-size:contain;">
+									</div>
+								</li>
+							</ul>
+						</div>
 
-    </html>
+						<h3 style="margin-left: 5%;">Frameworks & Technologies -></h3>
+
+						<div class="horizontal-nav">
+							<ul class="horizontal-nav__items">
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/AndroidStudio.jpg);background-size:contain;">
+									</div>
+								</li>
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/ReactJS.png);background-size:contain;">
+									</div>
+								</li>
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/Firebase.png);background-size:contain;">
+									</div>
+								</li>
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/Github.png);background-size:contain;">
+									</div>
+								</li>
+								<li>
+									<div class="place"
+										style="background-image:url(./LanguageLogos/NodeJS.jpg);background-size:contain;">
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					
+
+					<label class="content__closer" for="show-nav"></label>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
