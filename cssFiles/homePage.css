@@ -1,14 +1,14 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  /*--------------------------- Style the body------------------------------ */
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-  }
-  /*------------------------------Header-------------------------------------*/
-  /* angled div */
+/*--------------------------- Style the body------------------------------ */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+/*------------------------------Header-------------------------------------*/
+/* angled div */
 .header-slanted-div {
   position: relative;
   background: #1f2833;
@@ -20,7 +20,7 @@
 
 /* where the magic happens */
 .header-slanted-div:after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -38,141 +38,131 @@
   line-height: 1.5;
 }
 
-/*------------------------------Creating a column layou*-------------------------------/
-  /* Column container */
+/*------------------------------Creating a column layout for the header section (with potrait) -------------------------------*/
+/* Column container */
+.row-main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* Sidebar/left column */
+.side {
+  -ms-flex: 40%;
+  flex: 40%;
+  padding: 20px;
+  text-align: justify;
+}
+
+/* Main column */
+.main {
+  -ms-flex: 60%;
+  flex: 60%;
+  padding: 20px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
   .row-main {
-    display: -ms-flexbox;
-    /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap;
-    /* IE10 */
-    flex-wrap: wrap;
+    flex-direction: column;
   }
+}
+/*------------------------------Creating a column layout for the scrollspy section -------------------------------*/
+.row-main-scroll {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 
-  /* Create two unequal columns that sits next to each other */
-  /* Sidebar/left column */
-  .side {
-    -ms-flex: 30%;
-    /* IE10 */
-    flex: 30%;
-    /* background-color: #f1f1f1; */
-    padding: 20px;
-    text-align: justify;
-  }
-  .side-phone{
-    -ms-flex: 40%;
-    /* IE10 */
-    flex: 45%;
-    /* background-color: #f1f1f1; */
-    padding: 15px;
-    text-align: justify;
-  }
+.side-scroll {
+  -ms-flex: 40%;
+  flex: 45%;
+  padding: 15px;
+  text-align: justify;
+}
+.main-scroll {
+  -ms-flex: 60%;
+  flex: 55%;
+  padding: 5px;
+}
 
-  /* Main column */
+@media screen and (max-width: 1130px) {
+  .row-main-phone {
+    flex-direction: column;
+  }
+}
 
-  .main{
-    -ms-flex: 70%;
-    /* IE10 */
-    flex: 70%;
-    /* background-color: white; */
-    padding: 20px;
-  }
-  .main-phone {
-    -ms-flex: 60%;
-    /* IE10 */
-    flex: 55%;
-    /* background-color: white; */
-    padding: 5px;
-  }
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 700px) {
-    .row-main {
-      flex-direction: column;
-    }
-  }
-
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 400px) {
-    .navbar a {
-      float: none;
-      width: 100%;
-    }
-  }
-  /* -------------------------- Footer ---------------------------------*/
-  Edit in JSFiddle
-Result
-HTML
-CSS
-Resources
-.footer-basic {
-  padding:40px 0;
-  background-color:#ffffff;
-  color:#4b4c4d;
+/* -------------------------- Footer ---------------------------------*/
+Edit in JSFiddle Result HTML CSS Resources .footer-basic {
+  padding: 40px 0;
+  background-color: #ffffff;
+  color: #4b4c4d;
 }
 
 .footer-basic ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 .footer-basic li {
-  padding:0 10px;
+  padding: 0 10px;
 }
 
 .footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 .footer-basic ul a:hover {
-  opacity:1;
+  opacity: 1;
 }
 
 .footer-basic .social {
-  text-align:center;
-  padding-bottom:25px;
+  text-align: center;
+  padding-bottom: 25px;
 }
 
 .footer-basic .social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
-  opacity:0.75;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
 }
 
 .footer-basic .social > a:hover {
-  opacity:0.9;
+  opacity: 0.9;
 }
 
 .footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
 }
-  /*------------------------------------------------ Navigation Bar styles-----------------------------------------------------*/
-  .container
-  {
-    overflow: hidden;
-    position:absolute;
-    margin: 2px;
-    width: auto;
-    float: left;
-  }
-  .sidebar {
+/*------------------------------------------------ Navigation Bar styles-----------------------------------------------------*/
+.container {
+  overflow: hidden;
+  position: absolute;
+  margin: 2px;
+  width: auto;
+  float: left;
+}
+.sidebar {
   height: 100%;
   width: 0;
   position: fixed;
@@ -209,26 +199,26 @@ Resources
 
 .openbtn:hover {
   background-color: #444;
-  color:#66fcf1;
+  color: #66fcf1;
 }
 
 #main {
-    transition: margin-left .25s;
-    padding: 16px;
+  transition: margin-left 0.25s;
+  padding: 16px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
 }
 
-/* --------Skills-----------*/
+/* --------Slanted Div-----------*/
 
-.LanguageLogo {
-  border-radius: 50%;
-  width: 68px;
-}
 /* angled div */
 .slanted-div {
   position: relative;
@@ -240,8 +230,8 @@ Resources
 }
 
 /* where the magic happens */
-.slanted-div:before{
-  content: '';
+.slanted-div:before {
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -263,45 +253,7 @@ Resources
   font-size: 1.5em;
   line-height: 1.5;
 }
-.slanted-div h1, .slanted-div h3{
+.slanted-div h1,
+.slanted-div h3 {
   text-align: center;
-}
-
-/* image gallery  */
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 250px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-  cursor: pointer;
-}
-
-div.gallery img {
-  width: 250px;
-  height: 150px;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-@media screen and (max-width: 1300px) {
-  div.gallery img {
-    width: 200px;
-    height: 100px;
-  }
-  div.gallery {
-    width: 200px;
-  }
-}
-
-@media screen and (max-width: 1135px){
-  div.gallery 
-  {
-    display: none;
-  }
 }

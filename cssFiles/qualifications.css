@@ -77,7 +77,7 @@
 		flex-flow: column wrap;
 		width: 1170px;
 		/* ----------------------------------------------- for timeline height adjustment ------------------------------------- */
-		height: 375px;
+		height: 355px;
 		margin: 0 auto;
    }
 }

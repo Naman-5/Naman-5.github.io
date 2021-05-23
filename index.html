@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./cssFiles/qualifications.css" />
   <!-- Load an icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Popper JS -->
@@ -18,7 +19,6 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="./Scripts/navManagement.js"></script>
-  <script src="./Scripts/manageCards.js"></script>
 </head>
 
 <body>
@@ -64,7 +64,7 @@
           </p>
         </div>
         <div class="side">
-          <img style="border-radius: 50%; width: 320px" src="./ArtWork/myPotrait.png" />
+          <img style="border-radius: 50%; width: 325px" src="./ArtWork/myPotrait.png" />
         </div>
       </div>
     </div>
@@ -81,103 +81,79 @@
   </div>
   <!----------------------------------------------------------------- SideBar Menu (ends) ------------------------------------------------------------------->
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     function resizeIframe(iframe) {
       iframe.height = iframe.contentWindow.document.body.scrollHeight + 10 + "px";
     }
-  </script>
-  <!----------------------------------------------------------------- Education (begins) ------------------------------------------------------------------->
+  </script> -->
+  <!-- onload="resizeIframe(this)" -->
   <section id=timeline>
-    <h1><u>Education & Skills</u></h1>
-    <div class="demo-card-wrapper">
-
-      <div class="demo-card demo-card--step4">
-        <div class="head">
-          <div class="number-box">
-            <span><img title="Bennett University" style="width: 80px; background-color: white"
-                src="./LanguageLogos/Bennett.webp" /></span>
-          </div>
-          <h2>
-            B.Tech. CSE<span class="small">2019 - Present</span>
-          </h2>
-        </div>
-        <div class="body">
-          <span style="font-size: 20px">Bennett University</span>
-          <p style="font-size: 16px;">
-            Greater Noida, UP, India
-          </p>
-          <ul style="text-align: left; font-size: 15px">
-            <!-- <li>
-              I manage the Social Media handles for the society and help them
-              promote the events that are planned.
-            </li> -->
-            <li>
-              Social Media Head :- GeeksforGeeks Society Jul 2020 - Present
-            </li>
-          </ul>
-        </div>
+    <!-----------------------------------------------------------------Scrollspy (begins) --------------------------------------------------------------------->
+    <br>
+    <div class="row-main-scroll">
+      <div class="main-scroll">
+        <br>
+        <iframe src="desktop.html" title="" width="100%" height="650"
+          style=" border-radius: 15px;border-color: transparent; overflow-y: hidden;"></iframe>
       </div>
+      <!-----------------------------------------------------------------Scrollspy (ends) --------------------------------------------------------------------->
 
-      <!-- add new cards here  -->
-
-    </div>
-    <br />
-    <!----------------------------------------------------------------- Education (ends) ------------------------------------------------------------------->
-    <div class="row-main">
-      <div class="side-phone">
+      <!-----------------------------------------------------------------SideNote (begins) --------------------------------------------------------------------->
+      <div class="side-scroll">
         <p style="font-size: 20px;margin-left: 2%;margin-right: 2%;">
           The Tech industry is ever-evolving, pushing the boundaries of what we as humans can achieve & if you're not
           learning, you're not moving forward. I love learning to work with new tools & frameworks and enjoy building
           cool new projects.
-          
           I am a Linux enthusiast and enjoy trying out and learning about various distributions currently available and
-          under development. I mostly work with Debian based Linux distributions because they are stable and do not
-          follow a rolling release model.
+          under development.
         </p>
 
         <p style="font-size: 20px;margin-left: 2%;margin-right: 2%;">
-          I am a team player and look forward to work with a team where members have a diverse skillset. I believe that a great
+          I am a team player and look forward to work with a team where members have a diverse skillset. I believe that
+          a great
           team makes any project successful, and therefore all members must adapt to working together as one unit.
         </p>
 
-        <div class="gallery" onclick="document.location.href='./Projects.html'" style="width: 14.1em;" id="galleryItem1" >
-          <img src="./ArtWork/ImageGalleryProjects.jpg" alt="Cinque Terre" style="width:14em;">
-          <div class="desc">My projects</div>
-        </div>
+        <div style="margin:auto;width: 70%;">
+          <div style="display: flex;justify-content: space-around;">
+            <div>
+              <span><i class="fa fa-globe" style="font-size: 110px;"></i></span>
+              <p style="text-align: center;">Web Developer</p>
+            </div>
+            <div>
+              <span><i class="fa fa-linux" style="font-size: 110px;"></i></span>
+              <p style="text-align: center;">Linux Enthusiast</p>
+            </div>
+            <div>
+              <span><i class="fa fa-plane" style="font-size: 110px;"></i></span>
+              <p style="text-align: center;">Traveller</p>
+            </div>
+          </div>
 
-        <div class="gallery" onclick="document.location.href='./Experience.html'" style="width: 14.1em;"id="galleryItem2">
-          <img src="./ArtWork/ImageGalleryExperience.jpg" alt="Cinque Terre" style="width:14em;">
-          <div class="desc">Work Experience</div>
-        </div>
+          <br>
 
-        <!-- <div class="gallery" onclick="document.location.href='./Experience.html'" style="width: 14.1em;"id="galleryItem3">
-          <img src="./ArtWork/ImageGalleryExperience.jpg" alt="Cinque Terre" style="width:14em;">
-          <div class="desc">Work Experience</div>
-        </div>
+          <div style="display: flex;justify-content: space-around;">
+            <div>
+              <span><i class="fa fa-connectdevelop " style="font-size: 110px;"></i></span>
+              <p style="text-align: center;">AI and ML <br> Enthusiast</p>
+            </div>
+            <div>
+              <span><i class="fa fa-graduation-cap" style="font-size: 110px;text-align: center;"></i></span>
+              <p style="text-align: center;">Quick Learner</p>
+            </div>
+            <div>
+              <span><i class="fa fa-mobile" style="font-size: 110px;text-align: center;"></i></span>
+              <p style="text-align: center;">App Developer</p>
+            </div>
+          </div>
 
-        <div class="gallery" onclick="document.location.href='./Experience.html'" style="width: 14.1em;"id="galleryItem4">
-          <img src="./ArtWork/ImageGalleryExperience.jpg" alt="Cinque Terre" style="width:14em;">
-          <div class="desc">Work Experience</div>
         </div>
-
-        <div class="gallery" onclick="document.location.href='./Experience.html'" style="width: 14.1em;"id="galleryItem5">
-          <img src="./ArtWork/ImageGalleryExperience.jpg" alt="Cinque Terre" style="width:14em;">
-          <div class="desc">Work Experience</div>
-        </div>
-
-        <div class="gallery" onclick="document.location.href='./Experience.html'" style="width: 14.1em;"id="galleryItem6">
-          <img src="./ArtWork/ImageGalleryExperience.jpg" alt="Cinque Terre" style="width:14em;">
-          <div class="desc">Work Experience</div>
-        </div> -->
 
       </div>
-      <!-----------------------------------------------------------------Skills (begins) --------------------------------------------------------------------->
-      <div class="main-phone">
-        <iframe onload="resizeIframe(this)" src="desktop.html" title="" width="387px" height="500" style="margin-left: auto;margin-right: auto; display: block; border-radius: 15px;
-    border-color: transparent; overflow-y: hidden;"></iframe>
-      </div>
-      <!-----------------------------------------------------------------Skills (ends) --------------------------------------------------------------------->
+      
     </div>
+    <!-----------------------------------------------------------------SideNote (ends) --------------------------------------------------------------------->
+
   </section>
   <!-----------------------------------------------------------------Footer(begins) --------------------------------------------------------------------->
   <section class="slanted-div">
