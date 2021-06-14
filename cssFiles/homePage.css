@@ -88,9 +88,12 @@ body {
   padding: 5px;
 }
 
-@media screen and (max-width: 1130px) {
-  .row-main-phone {
+@media screen and (max-width: 1200px) {
+  .row-main-scroll {
     flex-direction: column;
+  }
+  .main-scroll{
+    padding: 25px;
   }
 }
 
