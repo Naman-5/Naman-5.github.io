@@ -93,3 +93,50 @@
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+
+
+/*------------------------------Creating a column layout for various project divisions -------------------------------*/
+* {
+  box-sizing: border-box;
+}
+/* Column container */
+.row-main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* Sidebar/left column */
+.side {
+  -ms-flex: 20%;
+  flex: 20%;
+  padding: 10px;
+  text-align: justify;
+}
+
+/* Main column */
+.main {
+  -ms-flex: 80%;
+  flex: 80%;
+  padding: 10px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row-main {
+    flex-direction: column;
+  }
+}
+.project
+{
+  margin: auto;
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: #111;
+  border-width: 1.5px;
+  border-style:groove;
+  font-size: 20px;
+  border-radius: 25px;
+}

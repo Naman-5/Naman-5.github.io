@@ -1,38 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Projects - Naman Mayer</title>
-    <meta charset="UTF-8" />
-    <!-- Load an icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./cssFiles/projectPage.css"/>
-    <script src="./Scripts/navManagement.js"></script>
-  </head>
-  <body>
-    <!--------------------------------------------------------Header----------------------------------------->
-    <section class="header-slanted-div">
-      <div class="container">
-        <!-- Adding the navbar button to the banner -->
-        <div id="main">
-          <button class="openbtn" onclick="openCloseNav()">☰</button>
-        </div>
+
+<head>
+  <title>Projects - Naman Mayer</title>
+  <meta charset="UTF-8" />
+  <!-- Load an icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./cssFiles/projectPage.css" />
+  <script src="./Scripts/navManagement.js"></script>
+</head>
+
+<body>
+  <!--------------------------------------------------------Header----------------------------------------->
+  <section class="header-slanted-div">
+    <div class="container">
+      <!-- Adding the navbar button to the banner -->
+      <div id="main">
+        <button class="openbtn" onclick="openCloseNav()">☰</button>
       </div>
-      <br />
-      <div style="padding: 10px;">
-        <h1 style="color: #66fcf1;font-size:2.5em;font-family: Roboto;">Projects</h1>
-      </div>
-    </section>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-     <!-- navbar contains links to various sections -->
-     <div id="mySidebar" class="sidebar">
-      <a href="./index.html"><i class="fa fa-fw fa-home"></i>Home</a>
-      <!-- <a href="./Articles.html"><i class="fa fa-fw fas fa-edit"></i>Articles</a> -->
-      <a href="./Projects.html"><i class="fa fa-fw fa-code-fork"></i>Projects</a>
-      <!-- <a href="./skills.html"><i class="fa fa-fw fas fa-code"></i>Skills</a> -->
-      <a href="./Experience.html"><i class="fa fa-fw fas fa-graduation-cap"></i>Experience</a>
     </div>
-  </body>
+    <br />
+    <div style="padding: 10px;">
+      <h1 style="color: #66fcf1;font-size:2.5em;font-family: Roboto;">Projects</h1>
+    </div>
+  </section>
+  <br><br />
+  <br><br />
+  <br><br />
+  <!-- navbar contains links to various sections -->
+  <div id="mySidebar" class="sidebar">
+    <a href="./index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+    <!-- <a href="./Articles.html"><i class="fa fa-fw fas fa-edit"></i>Articles</a> -->
+    <a href="./Projects.html"><i class="fa fa-fw fa-code-fork"></i>Projects</a>
+    <!-- <a href="./skills.html"><i class="fa fa-fw fas fa-code"></i>Skills</a> -->
+    <a href="./Experience.html"><i class="fa fa-fw fas fa-graduation-cap"></i>Experience</a>
+  </div>
+
+  <!-- projects begin from here  -->
+
+  <!-- project-1  -->
+  <div class="project">
+    <div class="row-main">
+      <div class="side">
+        <img style="border-radius: 50%; width: 200px;display: block;margin-left: auto;margin-right: auto;" src="./LanguageLogos/flutterLogo.png" />
+      </div>
+      <div class="main">
+        <h2>Healthsy</h2>
+        <p style="text-align: justify;">People are devoting more time than ever before to keep themselves fit and healthy. Collecting relevant data &
+          visualising it can support the process to create a fitter global population.
+         <br/>
+          Healthsy is a cross-platform <i>(runs on Android and IOS)</i> mobile application developed using <b>Flutter</b>, designed
+          for people to record their Blood Pressure, Blood Sugar and Weight. It even allows the users to keep track of
+          medication, vaccination and doctor's appointments.</p>
+          <a href="https://github.com/Naman-5/Healthsy" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> GitHub Repository</a>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
