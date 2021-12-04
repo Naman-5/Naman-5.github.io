@@ -38,6 +38,32 @@
   </div>
 
   <!-- projects begin from here  -->
+
+  <!-- Project-3  -->
+  <div class="project">
+    <div class="row-main">
+      <div class="side">
+        <img style="border-radius: 50%; width: 200px;display: block;margin-left: auto;margin-right: auto;"
+          src="./project_logos/SMSPrism.png" />
+      </div>
+      <div class="main">
+        <h2>SMSPrism</h2>
+        <p style="text-align: justify;">Built an SMS app that could detect spam messages and separate them from
+          the important ones. The whole system works on a client-server architecture where new messages received by the
+          app are sent to the server via an HTTP request to identify spam. We have used the Flask package to design a
+          REST API to achieve client-server communication and to integrate Random Forest Classifier model from the
+          Scikit-Learn Package. The machine learning model filters SMS messages based on the content that it contains.
+          We trained the model using a custom dataset containing 269 message samples. Random Forest Classifier gave an
+          overall accuracy of 0.78 on the dataset that has outperformed other models like Support Vector Machine and
+          Naive Bayes model in terms of accuracy. Moreover, the model's accuracy can be increased by training it on a
+          larger dataset.
+        </p>
+        <a href="https://github.com/Naman-5/SMSPrism" target="_blank" rel="noopener noreferrer"><i
+            class="fa fa-github"></i> GitHub Repository</a>
+      </div>
+    </div>
+  </div>
+  <br />
   <!-- project-2  -->
   <div class="project">
     <div class="row-main">
@@ -80,6 +106,7 @@
       </div>
     </div>
   </div>
+  <br />
 </body>
 
 </html>
